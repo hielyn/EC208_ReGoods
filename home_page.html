@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700;800;900&amp;family=Inter:wght@100;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff4ef",
+                        "background": "#fff4ef",
+                        "on-surface-variant": "#7f512e",
+                        "on-primary": "#fff0ea",
+                        "on-tertiary-fixed": "#342200",
+                        "on-secondary": "#e8f5fd",
+                        "surface-container-high": "#ffdcc5",
+                        "surface-variant": "#ffd4b9",
+                        "on-error": "#ffefec",
+                        "surface-container-highest": "#ffd4b9",
+                        "inverse-on-surface": "#c99169",
+                        "tertiary-container": "#f7b21f",
+                        "secondary-container": "#d7e4ec",
+                        "error-dim": "#b92902",
+                        "on-secondary-fixed-variant": "#515d64",
+                        "secondary-dim": "#455158",
+                        "on-primary-fixed": "#000000",
+                        "surface-tint": "#9b3f00",
+                        "primary-fixed-dim": "#f46800",
+                        "on-secondary-fixed": "#354147",
+                        "tertiary-fixed-dim": "#e7a407",
+                        "on-surface": "#4a2506",
+                        "on-tertiary": "#fff1df",
+                        "surface-dim": "#ffcaa5",
+                        "on-tertiary-fixed-variant": "#5b3e00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#515d64",
+                        "tertiary": "#7a5400",
+                        "tertiary-dim": "#6b4900",
+                        "on-primary-container": "#401600",
+                        "primary-container": "#ff7a2c",
+                        "on-tertiary-container": "#4f3600",
+                        "surface-container": "#ffe3d1",
+                        "primary": "#9b3f00",
+                        "inverse-surface": "#1c0900",
+                        "inverse-primary": "#fd6c00",
+                        "primary-dim": "#883700",
+                        "tertiary-fixed": "#f7b21f",
+                        "on-background": "#4a2506",
+                        "error": "#b02500",
+                        "error-container": "#f95630",
+                        "surface-container-low": "#ffede4",
+                        "outline-variant": "#dba177",
+                        "outline": "#9e6b46",
+                        "secondary-fixed-dim": "#c9d6de",
+                        "on-secondary-container": "#47545a",
+                        "on-primary-fixed-variant": "#4f1d00",
+                        "secondary-fixed": "#d7e4ec",
+                        "on-error-container": "#520c00",
+                        "surface-bright": "#fff4ef",
+                        "primary-fixed": "#ff7a2c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fff4ef;
+            color: #4a2506;
+            line-height: 1.6;
+        }
+
+        .glass-nav {
+            background: rgba(255, 244, 239, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="pb-32">
+    <!-- Top Navigation Anchor -->
+    <header class="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-[#fff4ef] dark:bg-[#1a110a]">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e]">menu</span>
+            <h1
+                class="font-be-vietnam-pro text-xl font-bold text-[#4a2506] dark:text-[#fff4ef] tracking-tight leading-relaxed">
+                Khai Phóng Công Nghệ</h1>
+        </div>
+        <div class="flex items-center gap-5">
+            <span class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e]">search</span>
+            <div class="hidden md:flex gap-6">
+                <span class="font-medium text-[#9b3f00]">Trang chủ</span>
+                <span class="font-medium text-[#7f512e]">Dịch vụ</span>
+                <span class="font-medium text-[#7f512e]">Giỏ hàng</span>
+                <span class="font-medium text-[#7f512e]">Cá nhân</span>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 md:px-6 space-y-8 mt-4">
+        <!-- Search Bar Section -->
+        <section class="relative">
+            <div
+                class="bg-surface-container-lowest rounded-full px-6 py-4 flex items-center gap-3 shadow-[0_4px_20px_rgba(74,37,6,0.04)] border border-outline-variant/10">
+                <span class="material-symbols-outlined text-primary">search</span>
+                <input
+                    class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-on-surface-variant/60 font-body"
+                    placeholder="Tìm kiếm iPhone, Laptop, Phụ kiện..." type="text" />
+                <span class="material-symbols-outlined text-on-surface-variant">tune</span>
+            </div>
+        </section>
+        <!-- Hero Promo Banner (Asymmetric Layout) -->
+        <section
+            class="relative overflow-hidden rounded-3xl bg-primary-container min-h-[220px] md:min-h-[340px] flex items-center">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent z-10"></div>
+            <img class="absolute inset-0 w-full h-full object-cover"
+                data-alt="Modern smartphone and tablet on a clean wooden desk with warm cinematic lighting and bokeh background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXkG5BS7me0AhuUX1jEkMTbh9nv7gLnAOHapFJuskuPDo7fIA8dx9h2aVGMgBmHE5qxLB6fcdmQcFS4R2ukXpE6GRjSmIT59_Awq2mbfKLocXrQhCO855UzL3uGi4xqlsF7IkyktQxfXK2i8HpqNlpH0nTEp7VTdL9gYF5C7Ha2xqUBKZ6J9c8dSTmsRzbr8clO-amG3-mTznGJ3LQSXiSQtpKbQiB9pqtsm3Ky9ShXuqMq2UXtNIYbKDW0DxiH8r3v0163Y2gRys" />
+            <div class="relative z-20 p-8 md:p-12 max-w-lg">
+                <h2
+                    class="text-on-primary font-headline text-3xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+                    Thu Cũ Đổi Mới,<br />Lên Đời Tuyệt Đỉnh</h2>
+                <p class="text-on-primary/90 font-body text-lg mb-6">Trợ giá lên đến 2 triệu đồng. Thủ tục nhanh gọn
+                    trong 15 phút.</p>
+                <button
+                    class="bg-surface-container-lowest text-primary px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform">Khám
+                    phá ngay</button>
+            </div>
+        </section>
+        <!-- Category Grid (Bento Style) -->
+        <section>
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-on-surface">Danh mục</h3>
+                <span class="text-primary font-medium text-sm">Xem tất cả</span>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div
+                    class="bg-surface-container-low p-6 rounded-3xl flex flex-col items-center justify-center gap-3 hover:bg-surface-container-high transition-colors cursor-pointer group">
+                    <div
+                        class="w-16 h-16 bg-surface-container-lowest rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">smartphone</span>
+                    </div>
+                    <span class="font-bold text-on-surface">Điện thoại</span>
+                </div>
+                <div
+                    class="bg-surface-container-low p-6 rounded-3xl flex flex-col items-center justify-center gap-3 hover:bg-surface-container-high transition-colors cursor-pointer group">
+                    <div
+                        class="w-16 h-16 bg-surface-container-lowest rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">laptop_mac</span>
+                    </div>
+                    <span class="font-bold text-on-surface">Laptop</span>
+                </div>
+                <div
+                    class="bg-surface-container-low p-6 rounded-3xl flex flex-col items-center justify-center gap-3 hover:bg-surface-container-high transition-colors cursor-pointer group">
+                    <div
+                        class="w-16 h-16 bg-surface-container-lowest rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">tablet_android</span>
+                    </div>
+                    <span class="font-bold text-on-surface">Máy tính bảng</span>
+                </div>
+                <div
+                    class="bg-surface-container-low p-6 rounded-3xl flex flex-col items-center justify-center gap-3 hover:bg-surface-container-high transition-colors cursor-pointer group">
+                    <div
+                        class="w-16 h-16 bg-surface-container-lowest rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-primary text-3xl">headphones</span>
+                    </div>
+                    <span class="font-bold text-on-surface">Phụ kiện</span>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Section: "Gợi ý cho bạn" -->
+        <section>
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-on-surface">Gợi ý cho bạn</h3>
+                <div class="flex gap-2">
+                    <button
+                        class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant"><span
+                            class="material-symbols-outlined">chevron_left</span></button>
+                    <button
+                        class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant"><span
+                            class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div
+                    class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10 transition-all hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Professional studio shot of a graphite grey iPhone 13 Pro showing the triple camera system on a clean warm background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD197BocZuzWq8rUalKHS8U0nkIqmim2VEmEwxKSABeizo5gqYJ8VOmEbXeKFeYMvxBgi91Qk22oNsD6Gw13dET0blp23N_aZoQ1hhvh_fooZXCTo5rB6ScM1BgU9hAr4W6-kU8NjjfIgIoPn94Z3fejmZ63H9B3A6pm5v_ldfpjjdCK8-LmqOBac9A8QH4rXH4K1_nfsK7YKCUsU3jZLZQb96Xvv3zKL3Oh3bqn4_iTCjWsA9ZCFUUkoleqcQeAJxuUTKcexpDQ6E" />
+                        <div
+                            class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Mới 99%</div>
+                        <button
+                            class="absolute top-4 right-4 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-primary shadow-sm"><span
+                                class="material-symbols-outlined filled-icon">favorite</span></button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-on-surface line-clamp-1">iPhone 13 Pro 256GB</h4>
+                        <div class="flex items-center gap-1 text-on-tertiary-fixed font-medium mt-1 mb-3">
+                            <span class="material-symbols-outlined text-sm filled-icon text-tertiary">star</span>
+                            <span class="text-xs">4.8 (120 đánh giá)</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <p class="text-primary font-bold text-xl">14.500.000đ</p>
+                                <p class="text-on-surface-variant text-xs flex items-center gap-1 mt-1">
+                                    <span class="material-symbols-outlined text-xs">location_on</span> Quận 1, TP. HCM
+                                </p>
+                            </div>
+                            <button
+                                class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div
+                    class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10 transition-all hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Sleek MacBook Air silver finish on a minimal workspace with soft natural morning light"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLT_TA3UBxzc4km_3wpGMmdnXsGnFGhQR2gPF7Lt-PN-9DY1QGpQoZlgSgGE9prILln_7JNjSbSN2_Xn2VtQ5qAEUiqUXGDf-CxAwmnepLoe21MjeisrWTf-pk-pNCsF_9f__7gZ6mUIP25NviF7viXbGbQy_RQWsShKed2tgJ2NcdF90J0WX79luHYH1dh710_k82XsLuN2tQOld-UgGaPSPpzDq7uhYEkwDKvZ2G7AK6iIENgfFWBcQWnhjcQHuGuHxUDs-Yudc" />
+                        <div
+                            class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Like New</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-on-surface line-clamp-1">MacBook Air M1 2020</h4>
+                        <div class="flex items-center gap-1 text-on-tertiary-fixed font-medium mt-1 mb-3">
+                            <span class="material-symbols-outlined text-sm filled-icon text-tertiary">star</span>
+                            <span class="text-xs">4.9 (85 đánh giá)</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <p class="text-primary font-bold text-xl">16.200.000đ</p>
+                                <p class="text-on-surface-variant text-xs flex items-center gap-1 mt-1">
+                                    <span class="material-symbols-outlined text-xs">location_on</span> Cầu Giấy, Hà Nội
+                                </p>
+                            </div>
+                            <button
+                                class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div
+                    class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10 transition-all hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="iPad Pro with Apple Pencil on a desk, top-down view, vibrant screen colors, professional editing setup"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeEeQFkKAihsB9lq_MJgwHFvwFshf7i_v9MFBOz3EC-8XI9vFtmTjjWAkjDeKtVDPk63TNxae8oa8vQRcx6h2j9lFms25C2FiP_IB9TWRLjkapMU4TmODWuyLZ0vk2dydJutIVbelKXhgZnkVwaL2yZlNVDeszhL5R1s3teUU8FU69mIn4sPSC1Fk8_H5Xb9DY3AkBUV4PSP6E7tNlVXnALoKMWaYqUE2VYbKXjs5oq8qxeV0ac6Iz411aaDbHQNu4ioNAea-X5Hc" />
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-on-surface line-clamp-1">iPad Pro M2 11 inch</h4>
+                        <div class="flex items-center gap-1 text-on-tertiary-fixed font-medium mt-1 mb-3">
+                            <span class="material-symbols-outlined text-sm filled-icon text-tertiary">star</span>
+                            <span class="text-xs">5.0 (42 đánh giá)</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <p class="text-primary font-bold text-xl">19.800.000đ</p>
+                                <p class="text-on-surface-variant text-xs flex items-center gap-1 mt-1">
+                                    <span class="material-symbols-outlined text-xs">location_on</span> Ninh Kiều, Cần
+                                    Thơ
+                                </p>
+                            </div>
+                            <button
+                                class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div
+                    class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-outline-variant/10 transition-all hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Bose noise cancelling headphones resting on a soft fabric surface, close up texture, studio lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0h1tZ800pPxNHFwt_ZWg69euDX3swiOVt029I4ZEv5TrSDHtT12NBQplaM6brx1NGWH334oSC12e1tgny161riolbNV9IVx8NkszrNoAvKcQ7jhYOMHCz6jLYRmrNlFiGCai3K-kehNOKe6GseOvCdAHc28VqHwh3RIUicEmNt_W3dbTDToeoW9qJcs1SAjASOYG7xPbI4qh9LZG2SIZPgrSUghMfDnaCxM_cbuqBIyY6dcdj1QpVOAF-tZJyQnFOPhMg7NSqn8" />
+                        <div class="absolute top-4 left-4 bg-error text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Giá sốc</div>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-on-surface line-clamp-1">Tai nghe Sony WH-1000XM5</h4>
+                        <div class="flex items-center gap-1 text-on-tertiary-fixed font-medium mt-1 mb-3">
+                            <span class="material-symbols-outlined text-sm filled-icon text-tertiary">star</span>
+                            <span class="text-xs">4.7 (215 đánh giá)</span>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <p class="text-primary font-bold text-xl">5.450.000đ</p>
+                                <p class="text-on-surface-variant text-xs flex items-center gap-1 mt-1">
+                                    <span class="material-symbols-outlined text-xs">location_on</span> Hải Châu, Đà Nẵng
+                                </p>
+                            </div>
+                            <button
+                                class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
+                                <span class="material-symbols-outlined">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter / Trust Section -->
+        <section
+            class="bg-surface-container rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 border border-outline-variant/20">
+            <div class="flex-1 space-y-4">
+                <h3 class="text-3xl font-bold text-on-surface">Mua sắm an tâm với Bảo hành Vàng</h3>
+                <p class="text-on-surface-variant text-lg">Chúng tôi cam kết kiểm định 100% sản phẩm đầu vào. Hoàn tiền
+                    nếu phát hiện hàng giả, hàng nhái.</p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">verified_user</span>
+                        <span class="font-bold text-sm">6 tháng bảo hành</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">local_shipping</span>
+                        <span class="font-bold text-sm">Giao hàng 2h</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">published_with_changes</span>
+                        <span class="font-bold text-sm">7 ngày đổi trả</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3">
+                <div class="bg-surface-container-lowest p-2 rounded-full flex">
+                    <input class="bg-transparent border-none focus:ring-0 flex-1 px-6 font-body text-sm"
+                        placeholder="Email nhận ưu đãi..." type="text" />
+                    <button class="bg-primary text-white px-6 py-3 rounded-full font-bold">Đăng ký</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Floating Action Button (FAB) -->
+    <button
+        class="fixed bottom-24 right-6 z-50 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-4 rounded-3xl flex items-center gap-2 shadow-2xl hover:scale-105 active:scale-95 transition-all group">
+        <span class="material-symbols-outlined font-bold">add_circle</span>
+        <span class="font-bold tracking-wide">Đăng tin ngay</span>
+    </button>
+    <!-- Bottom Navigation Bar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fff4ef]/80 dark:bg-[#1a110a]/80 backdrop-blur-xl border-t border-[#dba177]/20 shadow-[0_-4px_24px_-4px_rgba(74,37,6,0.06)] rounded-t-3xl">
+        <div
+            class="flex flex-col items-center justify-center bg-[#ffdcc5] dark:bg-[#4a2506] text-[#4a2506] dark:text-[#fff4ef] rounded-2xl px-5 py-2 transition-all">
+            <span class="material-symbols-outlined filled-icon">home</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Trang chủ</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-[#7f512e] dark:text-[#dba177] px-5 py-2 hover:bg-[#ffede4] dark:hover:bg-[#2d1600] rounded-2xl transition-all">
+            <span class="material-symbols-outlined">build</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Dịch vụ</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-[#7f512e] dark:text-[#dba177] px-5 py-2 hover:bg-[#ffede4] dark:hover:bg-[#2d1600] rounded-2xl transition-all">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Giỏ hàng</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-[#7f512e] dark:text-[#dba177] px-5 py-2 hover:bg-[#ffede4] dark:hover:bg-[#2d1600] rounded-2xl transition-all">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Cá nhân</span>
+        </div>
+    </nav>
+</body>
+
+</html>
