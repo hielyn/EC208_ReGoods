@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff4ef",
+                        "background": "#fff4ef",
+                        "on-surface-variant": "#7f512e",
+                        "on-primary": "#fff0ea",
+                        "on-tertiary-fixed": "#342200",
+                        "on-secondary": "#e8f5fd",
+                        "surface-container-high": "#ffdcc5",
+                        "surface-variant": "#ffd4b9",
+                        "on-error": "#ffefec",
+                        "surface-container-highest": "#ffd4b9",
+                        "inverse-on-surface": "#c99169",
+                        "tertiary-container": "#f7b21f",
+                        "secondary-container": "#d7e4ec",
+                        "error-dim": "#b92902",
+                        "on-secondary-fixed-variant": "#515d64",
+                        "secondary-dim": "#455158",
+                        "on-primary-fixed": "#000000",
+                        "surface-tint": "#9b3f00",
+                        "primary-fixed-dim": "#f46800",
+                        "on-secondary-fixed": "#354147",
+                        "tertiary-fixed-dim": "#e7a407",
+                        "on-surface": "#4a2506",
+                        "on-tertiary": "#fff1df",
+                        "surface-dim": "#ffcaa5",
+                        "on-tertiary-fixed-variant": "#5b3e00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#515d64",
+                        "tertiary": "#7a5400",
+                        "tertiary-dim": "#6b4900",
+                        "on-primary-container": "#401600",
+                        "primary-container": "#ff7a2c",
+                        "on-tertiary-container": "#4f3600",
+                        "surface-container": "#ffe3d1",
+                        "primary": "#9b3f00",
+                        "inverse-surface": "#1c0900",
+                        "inverse-primary": "#fd6c00",
+                        "primary-dim": "#883700",
+                        "tertiary-fixed": "#f7b21f",
+                        "on-background": "#4a2506",
+                        "error": "#b02500",
+                        "error-container": "#f95630",
+                        "surface-container-low": "#ffede4",
+                        "outline-variant": "#dba177",
+                        "outline": "#9e6b46",
+                        "secondary-fixed-dim": "#c9d6de",
+                        "on-secondary-container": "#47545a",
+                        "on-primary-fixed-variant": "#4f1d00",
+                        "secondary-fixed": "#d7e4ec",
+                        "on-error-container": "#520c00",
+                        "surface-bright": "#fff4ef",
+                        "primary-fixed": "#ff7a2c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .glass-panel {
+            background: rgba(255, 244, 239, 0.8);
+            backdrop-filter: blur(24px);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #dba177;
+            border-radius: 10px;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- Top AppBar - Following JSON Structure -->
+    <nav class="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-[#fff4ef] dark:bg-[#1a110a]">
+        <div class="flex items-center gap-4">
+            <button
+                class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e] active:scale-95 duration-150 p-2 hover:bg-[#ffede4] rounded-full">arrow_back</button>
+            <h1
+                class="font-be-vietnam-pro text-xl font-bold text-[#4a2506] dark:text-[#fff4ef] tracking-tight leading-relaxed">
+                Chi tiết sản phẩm</h1>
+        </div>
+        <div class="flex items-center gap-2">
+            <button
+                class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e] active:scale-95 duration-150 p-2 hover:bg-[#ffede4] rounded-full">share</button>
+            <button
+                class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e] active:scale-95 duration-150 p-2 hover:bg-[#ffede4] rounded-full">shopping_cart</button>
+        </div>
+        <div class="absolute bottom-0 left-0 bg-[#ffede4] dark:bg-[#2d1600] h-px w-full"></div>
+    </nav>
+    <main class="max-w-5xl mx-auto pb-32">
+        <!-- Image Carousel Section -->
+        <section class="relative px-4 pt-6">
+            <div class="aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl relative group">
+                <img class="w-full h-full object-cover"
+                    data-alt="Premium silver smartphone lying on a clean white surface with soft dramatic studio lighting and warm orange reflections"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-HDg2wLHBGQX5E_mMvg-WVvO2osO8JTT-q6hnetTc-fTFivnG9f-1aEmi6i4HioxZp821Plwc3vAN92uOpx-rLIe7XVY0PlZuBKguV_0TNxeqCSYZoS2c4fCbatbWb7_ScMSY_23QZTHRd5X_otwbCFW9fGrmDqT1XiedbHDWuD01KXz4EE3zYr2KIDNLrXQ93Vn7SIzvXS9TAXQg2DpuyVNk1sn4uQBxKc1VLA8oQmYkpL6Bve0B0Olcfn3RvbcXvjxIaZ57Jcw" />
+                <div
+                    class="absolute bottom-6 right-6 glass-panel px-4 py-1.5 rounded-full text-sm font-medium text-primary">
+                    1 / 5
+                </div>
+            </div>
+            <!-- Thumbnail Strip -->
+            <div class="flex gap-4 mt-6 overflow-x-auto pb-2 px-2 custom-scrollbar no-scrollbar">
+                <div class="flex-shrink-0 w-20 h-20 rounded-xl ring-2 ring-primary overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        data-alt="Close up of a premium smartphone camera lens with light reflecting off the glass surface"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO7GDBYuz14q55P51eB2t-NlvwQsKgdaPGljMmeH5zofhhy-iGXw4zBa2CtlefRd9FqDTU0_6nSd1QYdcuuoTKejsb2t7ip4tstG-AV4h5rdvRGPzdzhV6goJQvUFIQk_RrbIS_cQlWv4fKrI2mhC-J0caFarYDd6VpeJcTFxbStDqhQzvUD1E6cNTpSijeqWry-f1S9AUIEszvObnk5XZbymXEj66W-cte0kQTM9ohS1b9maJc1y5fjeUxQh_aEbIcvyYdnBmRm0" />
+                </div>
+                <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-surface-container-highest overflow-hidden">
+                    <img class="w-full h-full object-cover opacity-80"
+                        data-alt="Side profile of a sleek mobile phone showing the thin volume buttons and metallic frame"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbuKIu4q6t_va77jcmZyazY1OWDLYAc7attb64cyWnQLIWn82Q1Jl_O4XEHFq18ZsFVb3lCrJMf4wAHsMKzOfKr22y6p9aHoQO2cGb0N9ss_2p5z7AUhJ1KQc_OG9xZMwxzRAjoqNyOCtrNMnEGpN60lsGrBBO1rV2cgTvDhFx2J--LFWkMSUpFLVwFibxCVWPZKiXgcSfPlBQVXbA24qj9MC1v_AY5IRslBDHyBtju4gONhfyF4x89BGgX0vp1ZY6C4hMjnZgvDk" />
+                </div>
+                <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-surface-container-highest overflow-hidden">
+                    <img class="w-full h-full object-cover opacity-80"
+                        data-alt="Back view of a modern smartphone in a warm desert sand color on a neutral background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGts9lYsNRkaG-LajZgkXVA26PzsiDWwxeZI66O-jER_Wb59L-sNXVkULFT2E4_v8rw7DR9T0ZohkwgL3vuabrUntgW55jP6ipH7afppekFb0j9KicPk011J6EcJjP_9mFUkd7shHxxx1teb-QNg5CFgOMF0j3OAQffMpctlA2ZLtkNvl7-d4Ixx3K5Dg_rednDruO-jkCzp45k02uEyyT_URiaMHvf4LMhEcy7Pzguzyw0b2JEu0x5ci7OOqLN7c8Vv8io_iKPWI" />
+                </div>
+                <div class="flex-shrink-0 w-20 h-20 rounded-xl bg-surface-container-highest overflow-hidden">
+                    <img class="w-full h-full object-cover opacity-80"
+                        data-alt="Electronic internals and detailed view of a high-end tech gadget with precise construction"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPi70fvbPWctMNFSu2YVIVftIm5ApTh_f-NDJNxWXjrul02zO3On4DpzPOcniAwpW7UOoc3M6I3I3QiL8vrphxREc2hjrAlke63Pt_JB9Arad2tNSdonZQumrlzeqUZPHlh7tJvHj3MrcAxoyMJVNnUDgqY87V7_8x6fkGoYqVDaPRLSG8zuhxaOBEuw-WZl76SsXK5dD7NiYqgHw8pHyIfmUC2Zmtr686FcIGa2HwL7YarF9kxjNKE4cgYDD8YuQf-6_2dAvUjJA" />
+                </div>
+            </div>
+        </section>
+        <!-- Product Info Header -->
+        <section class="mt-8 px-6">
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <span
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high text-primary font-medium text-xs mb-3">
+                        <span class="material-symbols-outlined text-sm mr-1 fill-icon">verified</span>
+                        Đã kiểm duyệt
+                    </span>
+                    <h2 class="text-2xl font-extrabold text-on-surface leading-tight tracking-tight">iPhone 15 Pro Max
+                        256GB - Titan Tự Nhiên</h2>
+                </div>
+                <button
+                    class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-surface-container-low text-primary active:scale-90 transition-all">
+                    <span class="material-symbols-outlined">favorite</span>
+                </button>
+            </div>
+            <div class="mt-4 flex items-baseline gap-3">
+                <span class="text-3xl font-bold text-primary tracking-tight">24.500.000đ</span>
+                <span class="text-lg text-on-surface-variant line-through opacity-60">28.900.000đ</span>
+                <span
+                    class="bg-error-container text-on-error-container px-2 py-0.5 rounded text-xs font-bold">-15%</span>
+            </div>
+            <!-- Bento Status Grid -->
+            <div class="mt-8 grid grid-cols-2 gap-4">
+                <div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-1">
+                    <span class="text-on-surface-variant text-xs font-medium opacity-70">Tình trạng</span>
+                    <span class="text-on-surface font-bold text-lg">Mới 99% (Like New)</span>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-1">
+                    <span class="text-on-surface-variant text-xs font-medium opacity-70">Bảo hành</span>
+                    <span class="text-on-surface font-bold text-lg">6 tháng tại Shop</span>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-1">
+                    <span class="text-on-surface-variant text-xs font-medium opacity-70">Pin</span>
+                    <span class="text-on-surface font-bold text-lg">Hiệu suất 98%</span>
+                </div>
+                <div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-1">
+                    <span class="text-on-surface-variant text-xs font-medium opacity-70">Phụ kiện</span>
+                    <span class="text-on-surface font-bold text-lg">Cáp sạc zin</span>
+                </div>
+            </div>
+        </section>
+        <!-- Seller Profile -->
+        <section class="mt-10 mx-6 bg-surface-container-lowest p-5 rounded-3xl shadow-[0_8px_30px_rgb(74,37,6,0.04)]">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-full bg-surface-container overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        data-alt="Portrait of a friendly professional man in a clean white studio background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFGb4nRnPwusTOYpqc7065HVTahaIJf-MS2WrXljMFuEg1sJpFjEbpL1-3X2rwYyNqAvVCK8ZeDPFffF9fBe3oQONNCZxsxwKpWQVl-mausd2H6Kz9s8mk4TPFtn90B99t4PpgcDTgR0o2abmntRgkOY6nqppU8JmBe4jN8_ixamf1FDQqJMyXDWq-PfVhVrhI80L5VxmcL5-y96FqT5zaA857XdMdG8mRQ0O0Qipl_yH8O2g4_G6SI3lu9t23a4qqmleFi38X-gg" />
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-on-surface">Minh Tech Store</h3>
+                    <div class="flex items-center gap-2 mt-0.5">
+                        <div class="flex items-center text-tertiary">
+                            <span class="material-symbols-outlined text-sm fill-icon">star</span>
+                            <span class="text-xs font-bold ml-1">4.9</span>
+                        </div>
+                        <span class="text-[10px] text-on-surface-variant">•</span>
+                        <span class="text-xs text-on-surface-variant">2.4k đánh giá</span>
+                    </div>
+                </div>
+                <button
+                    class="bg-surface-container-high text-primary px-4 py-2 rounded-full text-xs font-bold hover:bg-primary hover:text-white transition-all">Xem
+                    Shop</button>
+            </div>
+        </section>
+        <!-- Product Description -->
+        <section class="mt-10 px-6">
+            <div class="border-b border-outline-variant/20 pb-4 mb-6">
+                <h3 class="text-xl font-bold text-on-surface">Mô tả chi tiết</h3>
+            </div>
+            <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <p>Cần pass lại em iPhone 15 Pro Max bản 256GB Titan Tự Nhiên cực sang trọng. Máy mình dùng rất kỹ, dán
+                    PPF toàn thân ngay từ lúc đập hộp nên ngoại hình không một vết xước, cam kết 99.9% như mới.</p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        <span>Màn hình sáng đẹp, không ám ố, không điểm chết.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        <span>Mọi chức năng FaceID, iCloud chính chủ, bao reset tại chỗ.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+                        <span>Còn bảo hành Apple đến cuối năm 2024.</span>
+                    </li>
+                </ul>
+                <p class="pt-2 italic">Ưu tiên các bạn ở khu vực Quận 1, Quận 3 qua xem máy trực tiếp để test cho an
+                    tâm. Fix nhẹ xăng xe cho anh em thiện chí mua nhanh gọn.</p>
+            </div>
+        </section>
+        <!-- Technical Specs Bento -->
+        <section class="mt-12 px-6">
+            <h3 class="text-xl font-bold text-on-surface mb-6">Thông số kỹ thuật</h3>
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden">
+                <div class="grid grid-cols-2">
+                    <div class="p-4 border-r border-b border-outline-variant/10">
+                        <span class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">Màn
+                            hình</span>
+                        <p class="mt-1 font-medium text-sm">6.7" OLED, 120Hz</p>
+                    </div>
+                    <div class="p-4 border-b border-outline-variant/10">
+                        <span
+                            class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">Chipset</span>
+                        <p class="mt-1 font-medium text-sm">Apple A17 Pro</p>
+                    </div>
+                    <div class="p-4 border-r border-outline-variant/10">
+                        <span
+                            class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">RAM</span>
+                        <p class="mt-1 font-medium text-sm">8GB</p>
+                    </div>
+                    <div class="p-4">
+                        <span class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">Bộ
+                            nhớ</span>
+                        <p class="mt-1 font-medium text-sm">256GB</p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="w-full mt-6 py-4 text-primary font-bold text-sm bg-surface-container-high rounded-2xl hover:bg-surface-container transition-colors">Xem
+                tất cả thông số</button>
+        </section>
+    </main>
+    <!-- Bottom Action Bar - Glassmorphism Checkout -->
+    <footer
+        class="fixed bottom-0 left-0 right-0 z-50 glass-panel px-6 pt-4 pb-8 border-t border-[#dba177]/10 flex gap-4 items-center max-w-5xl mx-auto">
+        <button
+            class="flex flex-col items-center justify-center text-primary-dim h-14 w-14 shrink-0 bg-surface-container rounded-2xl active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-2xl">chat_bubble</span>
+            <span class="text-[10px] font-bold mt-0.5">Chat</span>
+        </button>
+        <button
+            class="flex-1 h-14 bg-surface-container-high text-primary font-bold rounded-full active:scale-95 transition-all flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-xl">add_shopping_cart</span>
+            <span>Thêm vào giỏ</span>
+        </button>
+        <button
+            class="flex-[1.2] h-14 bg-gradient-to-r from-primary to-primary-container text-on-primary font-extrabold rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all text-lg">
+            Mua ngay
+        </button>
+    </footer>
+</body>
+
+</html>

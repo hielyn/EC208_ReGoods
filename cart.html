@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff4ef",
+                        "background": "#fff4ef",
+                        "on-surface-variant": "#7f512e",
+                        "on-primary": "#fff0ea",
+                        "on-tertiary-fixed": "#342200",
+                        "on-secondary": "#e8f5fd",
+                        "surface-container-high": "#ffdcc5",
+                        "surface-variant": "#ffd4b9",
+                        "on-error": "#ffefec",
+                        "surface-container-highest": "#ffd4b9",
+                        "inverse-on-surface": "#c99169",
+                        "tertiary-container": "#f7b21f",
+                        "secondary-container": "#d7e4ec",
+                        "error-dim": "#b92902",
+                        "on-secondary-fixed-variant": "#515d64",
+                        "secondary-dim": "#455158",
+                        "on-primary-fixed": "#000000",
+                        "surface-tint": "#9b3f00",
+                        "primary-fixed-dim": "#f46800",
+                        "on-secondary-fixed": "#354147",
+                        "tertiary-fixed-dim": "#e7a407",
+                        "on-surface": "#4a2506",
+                        "on-tertiary": "#fff1df",
+                        "surface-dim": "#ffcaa5",
+                        "on-tertiary-fixed-variant": "#5b3e00",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#515d64",
+                        "tertiary": "#7a5400",
+                        "tertiary-dim": "#6b4900",
+                        "on-primary-container": "#401600",
+                        "primary-container": "#ff7a2c",
+                        "on-tertiary-container": "#4f3600",
+                        "surface-container": "#ffe3d1",
+                        "primary": "#9b3f00",
+                        "inverse-surface": "#1c0900",
+                        "inverse-primary": "#fd6c00",
+                        "primary-dim": "#883700",
+                        "tertiary-fixed": "#f7b21f",
+                        "on-background": "#4a2506",
+                        "error": "#b02500",
+                        "error-container": "#f95630",
+                        "surface-container-low": "#ffede4",
+                        "outline-variant": "#dba177",
+                        "outline": "#9e6b46",
+                        "secondary-fixed-dim": "#c9d6de",
+                        "on-secondary-container": "#47545a",
+                        "on-primary-fixed-variant": "#4f1d00",
+                        "secondary-fixed": "#d7e4ec",
+                        "on-error-container": "#520c00",
+                        "surface-bright": "#fff4ef",
+                        "primary-fixed": "#ff7a2c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .headline-lg {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+        }
+
+        .title-lg {
+            font-size: 1.375rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+        }
+
+        .label-md {
+            font-size: 0.75rem;
+            line-height: 1rem;
+            font-weight: 500;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header class="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-[#fff4ef] dark:bg-[#1a110a]">
+        <div class="flex items-center gap-4">
+            <button
+                class="flex items-center justify-center p-2 rounded-full hover:bg-[#ffede4] active:scale-95 duration-150 transition-colors">
+                <span class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e]">arrow_back</span>
+            </button>
+            <h1 class="text-xl font-bold text-[#4a2506] dark:text-[#fff4ef] font-be-vietnam-pro tracking-tight">Giỏ hàng
+            </h1>
+        </div>
+        <button
+            class="flex items-center justify-center p-2 rounded-full hover:bg-[#ffede4] active:scale-95 duration-150 transition-colors">
+            <span class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e]">search</span>
+        </button>
+    </header>
+    <main class="max-w-2xl mx-auto px-4 pb-40">
+        <!-- Section: Order List -->
+        <section class="mt-6">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="title-lg">Sản phẩm đã chọn</h2>
+                <span class="text-[#7f512e] label-md">2 sản phẩm</span>
+            </div>
+            <!-- Product Items (Tonal Layering Instead of Borders) -->
+            <div class="space-y-6">
+                <!-- Item 1 -->
+                <div class="bg-surface-container-low p-4 rounded-xl flex gap-4 items-center">
+                    <div class="relative w-24 h-24 shrink-0 bg-surface-container-highest rounded-lg overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Premium used smartphone with titanium finish and clean lens glass reflecting warm studio lighting on a soft peach background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYF_aypWHjfBlSevDq53xTALZt2LtYsY6XlO5lJCGtLSNXj6auJflmRCZ1vyeMHAZXCjDrr2om5KzMI4EqDnGFWRx6j_LbgBUhKbZYeHjbzJM5JdWfqzBeaC4qwpJ1UZBussQtyAzXkKc5jujHwwEc_i-IzYgvD_Em_jH2ZplSY3r6v0c39kE3B8G9uQv0Ry9D0KMbcempHQ_zpXsq8fYSWGUQAd6PCmKVETGBhz8ldpG_y1wlyK2phqX315N4IzR9-5sUD8Fk8o4" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between h-24">
+                        <div>
+                            <h3 class="font-semibold text-on-surface line-clamp-1">iPhone 14 Pro Max - 256GB</h3>
+                            <p class="text-on-surface-variant text-sm mt-1">Tình trạng: 99% (Deep Purple)</p>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <span class="text-primary font-bold text-lg">22.500.000đ</span>
+                            <div class="flex items-center gap-3 bg-surface-container-lowest rounded-full px-3 py-1">
+                                <button class="text-primary font-bold">−</button>
+                                <span class="font-medium px-1">1</span>
+                                <button class="text-primary font-bold">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-surface-container-low p-4 rounded-xl flex gap-4 items-center">
+                    <div class="relative w-24 h-24 shrink-0 bg-surface-container-highest rounded-lg overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Modern tablet with stylus resting on its screen, placed on a minimalist wooden desk with natural sunlight from a window"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCuCrpcFGE26SCQwl7fRi8h4vXbCPTbKBNnGjpob-PIns5AGq8W2-KPY9d7bmBISIbDEZjtK-XyTTprZ1ps6jc-Hc5WLicmLSyBeoAiC7GGAQW8zPNo6sbp_gMHeX32M7AJmZ3eT5q6vzZ4SiU6D66shS3aodMy7bTndpm2LwXy_L-t-xkehA1_86Yl3mpJnsj4-NBBojatCNC0UW2pRfLykvSmKG0d5foGkiG4OccsxBG9ouYCML9A5bEEo9s5xMD8Pjw9xUD21Q" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between h-24">
+                        <div>
+                            <h3 class="font-semibold text-on-surface line-clamp-1">iPad Air 5 M1 - Wifi</h3>
+                            <p class="text-on-surface-variant text-sm mt-1">Tình trạng: Mới trần (Space Gray)</p>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <span class="text-primary font-bold text-lg">12.900.000đ</span>
+                            <div class="flex items-center gap-3 bg-surface-container-lowest rounded-full px-3 py-1">
+                                <button class="text-primary font-bold">−</button>
+                                <span class="font-medium px-1">1</span>
+                                <button class="text-primary font-bold">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Voucher Section -->
+        <section class="mt-10">
+            <h2 class="title-lg mb-4">Mã giảm giá</h2>
+            <div class="flex gap-3">
+                <div
+                    class="flex-1 bg-surface-container-lowest p-1 rounded-full flex items-center px-4 border border-outline-variant/15">
+                    <span class="material-symbols-outlined text-outline text-xl">confirmation_number</span>
+                    <input
+                        class="bg-transparent border-none focus:ring-0 w-full text-on-surface placeholder:text-outline-variant/60 ml-2"
+                        placeholder="Nhập mã ưu đãi..." type="text" />
+                </div>
+                <button
+                    class="bg-primary-container text-on-primary px-6 py-3 rounded-full font-semibold hover:opacity-90 active:scale-95 transition-all">
+                    Áp dụng
+                </button>
+            </div>
+        </section>
+        <!-- Payment Methods -->
+        <section class="mt-10">
+            <h2 class="title-lg mb-4">Phương thức thanh toán</h2>
+            <div class="grid grid-cols-1 gap-3">
+                <!-- Wallet -->
+                <label
+                    class="flex items-center p-4 bg-surface-container-high rounded-2xl cursor-pointer transition-colors hover:bg-surface-container-high/80 group">
+                    <input checked=""
+                        class="w-5 h-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface-container-high"
+                        name="payment" type="radio" />
+                    <div class="ml-4 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary"
+                            style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                        <span class="font-medium text-on-surface">Ví điện tử (Momo, ZaloPay)</span>
+                    </div>
+                </label>
+                <!-- Transfer -->
+                <label
+                    class="flex items-center p-4 bg-surface-container-low rounded-2xl cursor-pointer transition-colors hover:bg-surface-container-high/50 group">
+                    <input
+                        class="w-5 h-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface-container-high"
+                        name="payment" type="radio" />
+                    <div class="ml-4 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-on-surface-variant">account_balance</span>
+                        <span class="font-medium text-on-surface-variant">Chuyển khoản ngân hàng</span>
+                    </div>
+                </label>
+                <!-- COD -->
+                <label
+                    class="flex items-center p-4 bg-surface-container-low rounded-2xl cursor-pointer transition-colors hover:bg-surface-container-high/50 group">
+                    <input
+                        class="w-5 h-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface-container-high"
+                        name="payment" type="radio" />
+                    <div class="ml-4 flex items-center gap-3">
+                        <span class="material-symbols-outlined text-on-surface-variant">payments</span>
+                        <span class="font-medium text-on-surface-variant">Thanh toán khi nhận hàng (COD)</span>
+                    </div>
+                </label>
+            </div>
+        </section>
+        <!-- Order Summary -->
+        <section class="mt-10 p-6 bg-surface-container-highest rounded-3xl">
+            <div class="space-y-3">
+                <div class="flex justify-between">
+                    <span class="text-on-surface-variant">Tạm tính</span>
+                    <span class="font-medium">35.400.000đ</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-on-surface-variant">Phí vận chuyển</span>
+                    <span class="font-medium text-green-700">Miễn phí</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-on-surface-variant">Giảm giá voucher</span>
+                    <span class="font-medium text-primary">-500.000đ</span>
+                </div>
+                <div class="h-px bg-outline-variant/20 my-4"></div>
+                <div class="flex justify-between items-baseline">
+                    <span class="title-lg">Tổng cộng</span>
+                    <span class="text-2xl font-extrabold text-primary">34.900.000đ</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bottom Action Bar (Glassmorphism) -->
+    <footer
+        class="fixed bottom-0 left-0 w-full z-50 bg-[#fff4ef]/80 dark:bg-[#1a110a]/80 backdrop-blur-xl border-t border-[#dba177]/20 px-6 pb-8 pt-4">
+        <div class="max-w-2xl mx-auto flex items-center justify-between gap-6">
+            <div class="hidden sm:block">
+                <p class="text-sm text-on-surface-variant">Tổng số tiền</p>
+                <p class="text-xl font-bold text-primary">34.900.000đ</p>
+            </div>
+            <button
+                class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-full text-lg font-bold shadow-[0_8px_20px_-4px_rgba(155,63,0,0.3)] hover:brightness-105 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                <span>Thanh toán ngay</span>
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+        </div>
+    </footer>
+    <!-- BottomNavBar (Shared Component Placeholder Logic) -->
+    <!-- Suppressed on Checkout focus screen to prioritize transaction -->
+</body>
+
+</html>
