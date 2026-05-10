@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(74, 37, 6, 0.08);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f46800",
+                        "surface-bright": "#fff4ef",
+                        "on-error-container": "#520c00",
+                        "outline": "#9e6b46",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#fff1df",
+                        "surface-container-high": "#ffdcc5",
+                        "surface-container-low": "#ffede4",
+                        "on-primary-container": "#401600",
+                        "on-secondary-fixed": "#354147",
+                        "on-tertiary-fixed": "#342200",
+                        "surface-variant": "#ffd4b9",
+                        "background": "#fff4ef",
+                        "tertiary-dim": "#6b4900",
+                        "error-dim": "#b92902",
+                        "surface-dim": "#ffcaa5",
+                        "secondary-dim": "#455158",
+                        "on-secondary-fixed-variant": "#515d64",
+                        "on-primary": "#fff0ea",
+                        "primary-dim": "#883700",
+                        "inverse-surface": "#1c0900",
+                        "on-error": "#ffefec",
+                        "secondary-fixed-dim": "#c9d6de",
+                        "inverse-primary": "#fd6c00",
+                        "on-tertiary-fixed-variant": "#5b3e00",
+                        "secondary-fixed": "#d7e4ec",
+                        "surface-tint": "#9b3f00",
+                        "surface-container-highest": "#ffd4b9",
+                        "tertiary-fixed": "#f7b21f",
+                        "primary-fixed": "#ff7a2c",
+                        "on-tertiary-container": "#4f3600",
+                        "on-secondary-container": "#47545a",
+                        "surface-container": "#ffe3d1",
+                        "secondary": "#515d64",
+                        "error": "#b02500",
+                        "primary-container": "#ff7a2c",
+                        "inverse-on-surface": "#c99169",
+                        "tertiary": "#7a5400",
+                        "secondary-container": "#d7e4ec",
+                        "on-surface-variant": "#7f512e",
+                        "on-primary-fixed": "#000000",
+                        "on-background": "#4a2506",
+                        "error-container": "#f95630",
+                        "outline-variant": "#dba177",
+                        "tertiary-container": "#f7b21f",
+                        "on-primary-fixed-variant": "#4f1d00",
+                        "primary": "#9b3f00",
+                        "on-surface": "#4a2506",
+                        "surface": "#fff4ef",
+                        "on-secondary": "#e8f5fd",
+                        "tertiary-fixed-dim": "#e7a407"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "display": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar -->
+    <header class="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-[#fff4ef] dark:bg-[#1a110a]">
+        <div class="flex items-center gap-4">
+            <button
+                class="text-[#9b3f00] dark:text-[#ffb68e] active:scale-95 duration-150 p-2 hover:bg-[#ffede4] rounded-full transition-colors">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <h1
+                class="font-be-vietnam-pro headline-lg tracking-tight leading-relaxed text-xl font-bold text-[#4a2506] dark:text-[#fff4ef]">
+                Khai Phóng Công Nghệ</h1>
+        </div>
+        <div class="flex items-center gap-2">
+            <button
+                class="text-[#9b3f00] dark:text-[#ffb68e] active:scale-95 duration-150 p-2 hover:bg-[#ffede4] rounded-full transition-colors">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+    </header>
+    <div class="bg-[#ffede4] dark:bg-[#2d1600] h-px w-full"></div>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32">
+        <!-- Hero Search Section -->
+        <section class="mb-12">
+            <h2
+                class="font-display font-extrabold text-4xl sm:text-5xl text-on-surface tracking-tight mb-6 max-w-2xl leading-[1.1]">
+                Tìm kiếm thiết bị <span class="text-primary italic">hoàn hảo</span> cho bạn.
+            </h2>
+            <div class="relative group">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <span class="material-symbols-outlined text-on-surface-variant">search</span>
+                </div>
+                <input
+                    class="block w-full pl-12 pr-4 py-5 bg-surface-container-low border-none rounded-3xl text-on-surface placeholder:text-on-surface-variant/60 focus:ring-2 focus:ring-primary/20 transition-all text-lg shadow-sm"
+                    placeholder="Tìm kiếm iPhone, MacBook, iPad..." type="text" />
+            </div>
+        </section>
+        <!-- Category Filters -->
+        <section class="mb-10 overflow-x-auto no-scrollbar">
+            <div class="flex gap-3 pb-2 min-w-max">
+                <button
+                    class="px-8 py-3 rounded-full bg-primary text-on-primary font-semibold text-sm transition-all shadow-lg shadow-primary/20">Tất
+                    cả</button>
+                <button
+                    class="px-8 py-3 rounded-full bg-surface-container-high text-on-surface font-medium text-sm hover:bg-surface-container-highest transition-all">iPhone</button>
+                <button
+                    class="px-8 py-3 rounded-full bg-surface-container-high text-on-surface font-medium text-sm hover:bg-surface-container-highest transition-all">Laptop</button>
+                <button
+                    class="px-8 py-3 rounded-full bg-surface-container-high text-on-surface font-medium text-sm hover:bg-surface-container-highest transition-all">iPad</button>
+                <button
+                    class="px-8 py-3 rounded-full bg-surface-container-high text-on-surface font-medium text-sm hover:bg-surface-container-highest transition-all">Phụ
+                    kiện</button>
+            </div>
+        </section>
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <article
+                class="group relative bg-surface-container-highest rounded-[2rem] p-5 pt-0 transition-transform duration-500 hover:-translate-y-2">
+                <div class="relative -mt-6 mb-4 overflow-visible">
+                    <img alt="iPhone 15 Pro"
+                        class="w-full h-56 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-500"
+                        data-alt="A high-end editorial shot of a titanium gray iPhone 15 Pro resting on a luxurious, warm beige textured fabric. The lighting is soft and atmospheric, coming from the side to highlight the metallic texture and sleek design. The background uses a sophisticated palette of warm oranges and earthy neutrals consistent with a premium concierge aesthetic. The mood is minimalist and expensive, focusing on the refined details of the used device."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcHeGLvHtPuI1lB9nsNA_6CPoMvsorqnLm_KCpfsn72EYA23MCu4NC9NfYRJPmR7974DTGGhLz-liYoyBM1_DFtkBpxBtD_em9rUUs_LTMUKRb53EN9SF2YsFjf79uTIo3fxzy9dnxbeoAkSYna-qx0YkjRvWLlhghBjBDdajPrfWMxBqSjEMl2Bg3Jx4Ti8swNDZqwSeoZY49ffMatkDH_ZCg_riJBn7heh7j3E4RBd98cQRIhWavU-mLkah_QqTs_PIqp2QRcb4" />
+                    <span
+                        class="absolute top-4 left-4 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-[10px] font-bold tracking-widest text-primary uppercase">Mới
+                        99%</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-headline font-bold text-lg text-on-surface leading-snug">iPhone 15 Pro - 256GB -
+                            Blue Titanium</h3>
+                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Quận 1, TP. HCM</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-display font-extrabold text-2xl text-primary">24.500.000đ</p>
+                        <button
+                            class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-90 transition-all shadow-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 2 -->
+            <article
+                class="group relative bg-surface-container-highest rounded-[2rem] p-5 pt-0 transition-transform duration-500 hover:-translate-y-2">
+                <div class="relative -mt-6 mb-4 overflow-visible">
+                    <img alt="MacBook Air M2"
+                        class="w-full h-56 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-500"
+                        data-alt="A minimalist professional product photograph of a silver MacBook Air M2 opened at a slight angle on a warm, cream-colored minimalist desk. The environment is clean and spacious with natural morning light creating soft shadows. The overall aesthetic is editorial and high-end, utilizing a color palette of warm whites and soft browns. The focus is on the ultra-thin profile of the laptop, conveying a sense of premium quality and care."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRi8myYm_JD7jrq-R3dAKTvBMKm_lUgEGORfVhnOLNC0JFmdIDs3OHqh1MsqFXPu4UlMFZ0XULwdzIE5XcMSCPI3hdLMNV8t4W_2yrOop2_l92D6eUaovL8gN4v8lHOlaNkwJv-frj1siJRtgCCjhsdHJSVa-mZULozzJC9CbA1-xIF0XzVdlrZqKRoxlha4x-_21OR3z-YRSYV0KbgTS11bEY7ExwOtdrduaGgJb-pBLfyk_lvv5XzAhZN-e2FnKVD_iIdSd-CYE" />
+                    <span
+                        class="absolute top-4 left-4 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-[10px] font-bold tracking-widest text-primary uppercase">Like
+                        New</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-headline font-bold text-lg text-on-surface leading-snug">MacBook Air M2 - 8GB /
+                            256GB</h3>
+                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Đống Đa, Hà Nội</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-display font-extrabold text-2xl text-primary">19.990.000đ</p>
+                        <button
+                            class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-90 transition-all shadow-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 3 -->
+            <article
+                class="group relative bg-surface-container-highest rounded-[2rem] p-5 pt-0 transition-transform duration-500 hover:-translate-y-2">
+                <div class="relative -mt-6 mb-4 overflow-visible">
+                    <img alt="iPad Pro M2"
+                        class="w-full h-56 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-500"
+                        data-alt="An artistic flat-lay photograph of an iPad Pro M2 paired with an Apple Pencil, placed on a high-end designer table made of light oak wood. The lighting is bright and airy, highlighting the crisp screen and sleek chassis of the tablet. The composition uses generous white space and a palette of warm beiges and deep ambers to create a serene, premium feel. The image emphasizes the device's utility for creative professionals in a curated lifestyle setting."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHKPiXg3YHSoP9DAnSUDCIOy20vslLL7QkKKsGMt3pn9F71EUGYy_-VxU_M6IbC9nWiPDt9VJBn8tMBgjMZ64Gt22rtwO4XB8sExRaAEEJ4_fK6C1jFXqBmo0H0XBsWBtlDBZjVaXXKvrYYJyfrQSaTh_7noB0QPLorTnqHETg-APvTiSnnBFNC1QyqQxG8nlnbTc3mnj1wZ5-PDT81PX504CWceOV32dsrvkRg-0rQQPgHN0FUPNuDodJAnAicFKVl-8H77-IXZs" />
+                    <span
+                        class="absolute top-4 left-4 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-[10px] font-bold tracking-widest text-primary uppercase">98%
+                        Fullbox</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-headline font-bold text-lg text-on-surface leading-snug">iPad Pro 11" M2 - Wi-Fi
+                            - 128GB</h3>
+                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Hải Châu, Đà Nẵng</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-display font-extrabold text-2xl text-primary">16.200.000đ</p>
+                        <button
+                            class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-90 transition-all shadow-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 4 -->
+            <article
+                class="group relative bg-surface-container-highest rounded-[2rem] p-5 pt-0 transition-transform duration-500 hover:-translate-y-2">
+                <div class="relative -mt-6 mb-4 overflow-visible">
+                    <img alt="AirPods Max"
+                        class="w-full h-56 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-500"
+                        data-alt="A luxurious product shot of space grey AirPods Max headphones resting on a soft, ivory velvet pillow. The lighting is warm and directional, creating deep, sophisticated shadows that emphasize the mesh and aluminum textures. The background is a blurred studio setting with warm amber glows. The style is strictly high-end editorial, treating the used tech like a precious artifact within a modern, light-mode digital boutique aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDebv71lms_risMWJHj1ywVFza-ST92qnXoTjVjkg4GyR-z4cx1J2IDG7-yj5onhESBORLUy7tjNyz0s1jQp6hjVX8xB9v35yu-o9lpGph4ZrBh6c6fuMHvVYPSd8uidrNbu2uyZ8Kxjz7gOl2FFNx5JzjRbKqPhIlWQxb8le6X7387rYRWWQOTo4j1XcahnB1aKtV3ZMWp-GVtgeMxB8sTmFyojU8Vgp7gW40pK3nttXDMpNWvmdOzWUUxOsFKCTn0wQMVPpqbidg" />
+                    <span
+                        class="absolute top-4 left-4 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-[10px] font-bold tracking-widest text-primary uppercase">Mới
+                        99%</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-headline font-bold text-lg text-on-surface leading-snug">AirPods Max - Space
+                            Grey</h3>
+                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Quận 7, TP. HCM</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-display font-extrabold text-2xl text-primary">8.800.000đ</p>
+                        <button
+                            class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-90 transition-all shadow-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Card 5 - Asymmetric Layout element -->
+            <article
+                class="group relative bg-surface-container-highest rounded-[2rem] p-5 pt-0 transition-transform duration-500 hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+                <div class="relative -mt-6 mb-4 overflow-visible">
+                    <img alt="Dell XPS 13"
+                        class="w-full h-56 object-cover rounded-2xl shadow-xl transform group-hover:scale-105 transition-transform duration-500"
+                        data-alt="A clean, minimalist close-up shot of a Dell XPS 13 laptop partially opened, showcasing the edge-to-edge display and premium carbon fiber deck. The laptop is placed on a minimalist, warm concrete surface with a few sprigs of green plants in the blurred background. The lighting is bright and natural, using a color palette of greys, warm beiges, and soft greens. The mood is professional and modern, highlighting the high-end industrial design of the used computer."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJTYM6X_UwHaz48dhpvwkO91Uf22-mqxRs-bOI3l-ZSyvlrMDr9ux058pZ1BF8EEbXnmGA6gN1b2p6l-bwXVYi-9n4F50EanDAuZEV5KN-oOnAmeHVvqBGY6SHIt20g_mxFvZwvgiJ3TSs8ikx1yghR_zJDvIDBDEVLtT9dGvNuqYZa2uJtazNMdzWCgHVRdPcu4qt44JUA2srMrPtYimuho1-NS3A1Qe503WMwTBTgVi3SdxZsnkqcAvMtjbz1AKGP5DrC3OYeHg" />
+                    <span
+                        class="absolute top-4 left-4 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full text-[10px] font-bold tracking-widest text-primary uppercase">Like
+                        New</span>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start">
+                        <h3 class="font-headline font-bold text-lg text-on-surface leading-snug">Dell XPS 13 9315 - i7 /
+                            16GB / 512GB</h3>
+                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-on-surface-variant text-xs">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Hoàn Kiếm, Hà Nội</span>
+                    </div>
+                    <div class="flex items-center justify-between pt-2">
+                        <p class="font-display font-extrabold text-2xl text-primary">22.900.000đ</p>
+                        <button
+                            class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center hover:scale-110 active:scale-90 transition-all shadow-md">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fff4ef]/80 dark:bg-[#1a110a]/80 backdrop-blur-xl rounded-t-3xl border-t border-[#dba177]/20 shadow-[0_-4px_24px_-4px_rgba(74,37,6,0.06)]">
+        <div
+            class="flex flex-col items-center justify-center bg-[#ffdcc5] dark:bg-[#4a2506] text-[#4a2506] dark:text-[#fff4ef] rounded-2xl px-5 py-2 transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Trang chủ</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-[#7f512e] dark:text-[#dba177] px-5 py-2 hover:bg-[#ffede4] dark:hover:bg-[#2d1600] transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined">build</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Dịch vụ</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-[#7f512e] dark:text-[#dba177] px-5 py-2 hover:bg-[#ffede4] dark:hover:bg-[#2d1600] transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Giỏ hàng</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-[#7f512e] dark:text-[#dba177] px-5 py-2 hover:bg-[#ffede4] dark:hover:bg-[#2d1600] transition-all active:scale-90 duration-200">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-be-vietnam-pro text-[11px] font-medium">Cá nhân</span>
+        </div>
+    </nav>
+    <!-- Floating Filter Trigger (Mobile Context) -->
+    <button
+        class="md:hidden fixed right-6 bottom-28 w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl active:scale-90 duration-150 z-40">
+        <span class="material-symbols-outlined">filter_list</span>
+    </button>
+</body>
+
+</html>

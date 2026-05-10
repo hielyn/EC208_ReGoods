@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f46800",
+                        "surface-bright": "#fff4ef",
+                        "on-error-container": "#520c00",
+                        "outline": "#9e6b46",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#fff1df",
+                        "surface-container-high": "#ffdcc5",
+                        "surface-container-low": "#ffede4",
+                        "on-primary-container": "#401600",
+                        "on-secondary-fixed": "#354147",
+                        "on-tertiary-fixed": "#342200",
+                        "surface-variant": "#ffd4b9",
+                        "background": "#fff4ef",
+                        "tertiary-dim": "#6b4900",
+                        "error-dim": "#b92902",
+                        "surface-dim": "#ffcaa5",
+                        "secondary-dim": "#455158",
+                        "on-secondary-fixed-variant": "#515d64",
+                        "on-primary": "#fff0ea",
+                        "primary-dim": "#883700",
+                        "inverse-surface": "#1c0900",
+                        "on-error": "#ffefec",
+                        "secondary-fixed-dim": "#c9d6de",
+                        "inverse-primary": "#fd6c00",
+                        "on-tertiary-fixed-variant": "#5b3e00",
+                        "secondary-fixed": "#d7e4ec",
+                        "surface-tint": "#9b3f00",
+                        "surface-container-highest": "#ffd4b9",
+                        "tertiary-fixed": "#f7b21f",
+                        "primary-fixed": "#ff7a2c",
+                        "on-tertiary-container": "#4f3600",
+                        "on-secondary-container": "#47545a",
+                        "surface-container": "#ffe3d1",
+                        "secondary": "#515d64",
+                        "error": "#b02500",
+                        "primary-container": "#ff7a2c",
+                        "inverse-on-surface": "#c99169",
+                        "tertiary": "#7a5400",
+                        "secondary-container": "#d7e4ec",
+                        "on-surface-variant": "#7f512e",
+                        "on-primary-fixed": "#000000",
+                        "on-background": "#4a2506",
+                        "error-container": "#f95630",
+                        "outline-variant": "#dba177",
+                        "tertiary-container": "#f7b21f",
+                        "on-primary-fixed-variant": "#4f1d00",
+                        "primary": "#9b3f00",
+                        "on-surface": "#4a2506",
+                        "surface": "#fff4ef",
+                        "on-secondary": "#e8f5fd",
+                        "tertiary-fixed-dim": "#e7a407"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "display": ["Be Vietnam Pro"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        /* Glassmorphism for Checkout Bar */
+        .glass-footer {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen pb-40">
+    <!-- TopAppBar - Execution from JSON -->
+    <header
+        class="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-[#fff4ef] dark:bg-[#1a110a] font-be-vietnam-pro">
+        <div class="flex items-center gap-4">
+            <button
+                class="p-2 transition-colors hover:bg-[#ffede4] dark:hover:bg-[#2d1600] rounded-full active:scale-95 duration-150">
+                <span class="material-symbols-outlined text-[#9b3f00] dark:text-[#ffb68e]">arrow_back</span>
+            </button>
+            <h1 class="headline-lg tracking-tight leading-relaxed text-xl font-bold text-[#4a2506] dark:text-[#fff4ef]">
+                Thanh toán
+            </h1>
+        </div>
+        <div class="flex items-center">
+            <button
+                class="p-2 text-[#9b3f00] dark:text-[#ffb68e] transition-colors hover:bg-[#ffede4] dark:hover:bg-[#2d1600] rounded-full active:scale-95 duration-150">
+                <span class="material-symbols-outlined">help_outline</span>
+            </button>
+        </div>
+    </header>
+    <!-- Separation Logic -->
+    <div class="bg-[#ffede4] dark:bg-[#2d1600] h-px w-full"></div>
+    <main class="max-w-4xl mx-auto px-6 pt-8 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+            <!-- Left Column: Shipping & Methods -->
+            <div class="lg:col-span-3 space-y-12">
+                <!-- Shipping Information Section -->
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary">local_shipping</span>
+                        <h2
+                            class="text-xl font-bold tracking-tight text-on-surface uppercase text-xs opacity-60 font-label tracking-widest">
+                            Thông tin giao hàng</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="group">
+                            <label class="block text-sm font-medium text-on-surface-variant mb-1.5 ml-1">Họ và
+                                tên</label>
+                            <input
+                                class="w-full px-5 py-4 bg-surface-container-lowest border-none rounded-2xl focus:ring-0 focus:bg-surface-container-high transition-all border-b-2 border-transparent focus:border-primary placeholder:text-on-surface-variant/40"
+                                placeholder="Nguyễn Văn A" type="text" />
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="group">
+                                <label class="block text-sm font-medium text-on-surface-variant mb-1.5 ml-1">Số điện
+                                    thoại</label>
+                                <input
+                                    class="w-full px-5 py-4 bg-surface-container-lowest border-none rounded-2xl focus:ring-0 focus:bg-surface-container-high transition-all border-b-2 border-transparent focus:border-primary placeholder:text-on-surface-variant/40"
+                                    placeholder="0901 234 567" type="tel" />
+                            </div>
+                            <div class="group">
+                                <label class="block text-sm font-medium text-on-surface-variant mb-1.5 ml-1">Email
+                                    (Không bắt buộc)</label>
+                                <input
+                                    class="w-full px-5 py-4 bg-surface-container-lowest border-none rounded-2xl focus:ring-0 focus:bg-surface-container-high transition-all border-b-2 border-transparent focus:border-primary placeholder:text-on-surface-variant/40"
+                                    placeholder="example@gmail.com" type="email" />
+                            </div>
+                        </div>
+                        <div class="group">
+                            <label class="block text-sm font-medium text-on-surface-variant mb-1.5 ml-1">Địa chỉ nhận
+                                hàng</label>
+                            <textarea
+                                class="w-full px-5 py-4 bg-surface-container-lowest border-none rounded-2xl focus:ring-0 focus:bg-surface-container-high transition-all border-b-2 border-transparent focus:border-primary placeholder:text-on-surface-variant/40 resize-none"
+                                placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                </section>
+                <!-- Shipping Method Section -->
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary">speed</span>
+                        <h2
+                            class="text-xl font-bold tracking-tight text-on-surface uppercase text-xs opacity-60 font-label tracking-widest">
+                            Phương thức vận chuyển</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Standard -->
+                        <label
+                            class="relative flex flex-col p-5 bg-surface-container-low rounded-2xl cursor-pointer group hover:bg-surface-container-high transition-all">
+                            <input checked=""
+                                class="absolute top-5 right-5 w-5 h-5 text-primary bg-surface-container-lowest border-outline-variant focus:ring-primary transition-all"
+                                name="shipping" type="radio" value="standard" />
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-on-surface-variant">package_2</span>
+                                <span class="font-bold text-on-surface">Tiêu chuẩn</span>
+                            </div>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Giao hàng trong 3-5 ngày làm
+                                việc. Tiết kiệm chi phí.</p>
+                            <span class="mt-4 font-bold text-primary">30.000đ</span>
+                        </label>
+                        <!-- Express -->
+                        <label
+                            class="relative flex flex-col p-5 bg-surface-container-low rounded-2xl cursor-pointer group hover:bg-surface-container-high transition-all">
+                            <input
+                                class="absolute top-5 right-5 w-5 h-5 text-primary bg-surface-container-lowest border-outline-variant focus:ring-primary transition-all"
+                                name="shipping" type="radio" value="express" />
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-on-surface-variant">bolt</span>
+                                <span class="font-bold text-on-surface">Hỏa tốc</span>
+                            </div>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Nhận hàng trong vòng 24h. Ưu tiên
+                                xử lý ngay lập tức.</p>
+                            <span class="mt-4 font-bold text-primary">85.000đ</span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+            <!-- Right Column: Order Summary & Bento Cards -->
+            <div class="lg:col-span-2 space-y-6">
+                <section class="bg-surface-container-highest rounded-[2rem] p-8">
+                    <h2 class="text-xl font-bold tracking-tight text-on-surface mb-6">Tóm tắt đơn hàng</h2>
+                    <div class="space-y-6 mb-8">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-20 h-20 rounded-xl overflow-hidden bg-white shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                <img alt="MacBook Pro" class="w-full h-full object-cover"
+                                    data-alt="A premium close-up of a sleek MacBook Pro laptop sitting on a clean, warm-toned wooden desk. The lighting is soft and editorial, highlighting the metallic texture and elegant industrial design of the device. The overall mood is sophisticated and minimal, echoing a high-end recommerce environment with a warm cream and orange color palette."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjsqReYEzr_NQar518aeV1khY5IEBT1oOAwZFuLzdKiSC3zOar3qYbJ8aizCJyq8xgCrTh_HXF-VUXRJ-KxIb0PggpS-MfQO3BOQUwO085Q0tqj7Kti4iN0leAiZCbf8_D5iYi1TuXb1WftMKBLBaqisdSqaiNBpfYyM11vhDpWaAlUghHmEDJjAMScWheAoKxAdfIv_lYlGHTd7Z9waIiKSOvl6d2-R_R-Y3JfGGoDq9mNIrTdbjGz0KCdVMQJ8bJmB3nCLOo8o4" />
+                            </div>
+                            <div class="flex flex-col justify-between py-1">
+                                <div>
+                                    <h3 class="font-bold text-on-surface leading-tight">MacBook Pro M1 2020</h3>
+                                    <p class="text-xs text-on-surface-variant mt-1">16GB / 512GB • Like New 99%</p>
+                                </div>
+                                <span class="text-sm font-bold text-primary">18.500.000đ</span>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex gap-4 group">
+                            <div
+                                class="w-20 h-20 rounded-xl overflow-hidden bg-white shrink-0 shadow-sm transition-transform group-hover:scale-105">
+                                <img alt="iPhone 13" class="w-full h-full object-cover"
+                                    data-alt="A studio portrait of a graphite iPhone 13 Pro standing vertically on a polished reflective surface. The background is a soft, warm neutral gradient that blends into a light orange hue. The lighting is crisp and professional, accentuating the glass and stainless steel components of the phone. High-end editorial aesthetic for used tech luxury."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy7R-ikt_cI6fa-xIQivIZMrVZEhAyFGGgzHGvWSQ6D0OJyB-6Cl1paMbszGVQ-Bc0qLDdy29iR81FhWzin0yjVJllJ9NMdaO0TpDbQXzkzaYkBS8F76Bsf8VBUCtaUXnmEC7mjwg7TA6lHNfwpZqzLsiw7COTAlIMHniDgmxFyuycE1CiboHDZEJhi2WZmNXhsYrGzBEEkbIv5BK579IN4vbr_vwsy7XlnoX8XazG2oDS6EOmzplneAdIUKYucgrKPoMeCvzrt2E" />
+                            </div>
+                            <div class="flex flex-col justify-between py-1">
+                                <div>
+                                    <h3 class="font-bold text-on-surface leading-tight">iPhone 13 Pro</h3>
+                                    <p class="text-xs text-on-surface-variant mt-1">128GB • Graphite • Battery 92%</p>
+                                </div>
+                                <span class="text-sm font-bold text-primary">12.200.000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Promo Code -->
+                    <div class="flex gap-2 mb-8">
+                        <input
+                            class="flex-grow px-4 py-3 bg-surface-container-lowest border-none rounded-xl focus:ring-1 focus:ring-primary text-sm font-medium"
+                            placeholder="Mã giảm giá" type="text" />
+                        <button
+                            class="px-5 py-3 bg-on-surface text-surface rounded-xl font-bold text-sm transition-transform active:scale-95">Áp
+                            dụng</button>
+                    </div>
+                    <!-- Totals -->
+                    <div class="space-y-3 pt-6 border-t border-outline-variant/20">
+                        <div class="flex justify-between text-sm text-on-surface-variant">
+                            <span>Tạm tính</span>
+                            <span>30.700.000đ</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-on-surface-variant">
+                            <span>Phí vận chuyển</span>
+                            <span>30.000đ</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-on-surface-variant">
+                            <span>Giảm giá</span>
+                            <span class="text-primary">-150.000đ</span>
+                        </div>
+                        <div class="flex justify-between items-baseline pt-4">
+                            <span class="font-bold text-on-surface">Tổng cộng</span>
+                            <span class="text-2xl font-extrabold text-primary tracking-tight">30.580.000đ</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- Trust Bento Card -->
+                <div class="bg-surface-container-low rounded-3xl p-6 flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary fill-icon"
+                            style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-on-surface text-sm">Cam kết Tech-Trust</h4>
+                        <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Mọi sản phẩm đều đã qua kiểm
+                            định 45 bước và bảo hành 6 tháng 1 đổi 1 tại hệ thống.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Checkout Sticky Bar (Glassmorphic) -->
+    <div class="fixed bottom-0 left-0 w-full z-50 glass-footer bg-surface/80 px-6 pb-8 pt-4">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="hidden md:block">
+                <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest mb-1">Số tiền thanh toán
+                </p>
+                <p class="text-2xl font-extrabold text-primary">30.580.000đ</p>
+            </div>
+            <div class="flex flex-col w-full md:w-auto">
+                <p class="md:hidden text-center text-xs text-on-surface-variant mb-3">Tổng cộng: <span
+                        class="font-bold text-primary">30.580.000đ</span></p>
+                <button
+                    class="w-full md:px-16 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
+                    Xác nhận thanh toán
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <p
+                    class="text-center text-[10px] text-on-surface-variant/60 mt-3 flex items-center justify-center gap-1">
+                    <span class="material-symbols-outlined text-[12px]">lock</span>
+                    Thanh toán bảo mật SSL 256-bit
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
